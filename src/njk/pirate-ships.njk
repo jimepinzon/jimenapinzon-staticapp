@@ -1,14 +1,18 @@
 {% extends '_templates/base.njk' %}
 
+{% block page_title %} Ships of the Golden Age of Pirates 
+{% endblock %}
+{% block page_description %} Read about the most famous ships, captains and journeys from the Golden Age of pirates. {% endblock %}
+
 {% block content %}
 <article class="container">
   <h1>Ships of the Golden Age of Pirates</h1>
-  <p>Intro text here.</p>
+  <p>Dive into a collection of famous pirate ships and their captains.</p>
 
 <div class="row">
   {% for ship in pirates.ships %}
   <div class="col-sm-6 col-lg-4">
-    <div class="card mb-4 text-white bg-dark mb-3" style="max-width: 18rem;">
+    <div class="card mb-4 text-white bg-dark mb-3">
       <div class="card-body">
         <h5 class="card-title">{{ ship.ship_name }}</h5>
         <h6 class="card-text">{{ ship.captain}}</h6>
